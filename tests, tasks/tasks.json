@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "git-push-auto",
+            "type": "shell",
+            "command": "git",
+            "args": [
+                "add", ".", 
+                "&&", "git", "commit", "-m", "Auto push: ${fileBasename}", 
+                "&&", "git", "push"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
